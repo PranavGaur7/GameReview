@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+body::before {
+    content: "";
+    background: url('../img/bg6new.png') no-repeat center center/cover;
+    filter: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+    top: 0px;
+    left: 0px;
+}
+.navbar{
+    top: 0;
+    left: 0;
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 80px;
+}
+.navbar::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+    top: 0px;
+    left: 0px;
+}
+.logo img{
+    position: relative;
+    height: 120px;
+    cursor: pointer;
+}
+.navbar ul{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar ul li{
+    font-size: 1.2rem;
+    list-style: none;
+    
+    padding: 0 40px;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    background-color: red;
+    padding: 8px 20px;
+    border-radius: 30px;
+    color: white;
+}
+.navbar ul li a:hover{
+    background-color: rgb(203, 0, 0);
+   
+}
+.login button{
+    outline: none;
+    border: none;
+    background-color: red;
+    font-size: 1.2rem;
+    padding: 8px 20px;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+}
+.login button:hover{
+    background-color: rgb(203, 0, 0);
+}
+
+.login a{
+    text-decoration: none;
+    color: white;
+}
+
+.loginBox{
+    display: block;
+    margin: auto;
+    width: 450px;
+    height: 550px;
+    background: rgb(0, 0, 0,0.8);
+    border-radius: 30px;
+    margin-top: 30px;
+    filter: none;
+}
+.loginBox form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.img img{
+    margin-top: 20px;
+    height: 150px;
+}
+.email{
+    width: 70%;
+    margin: 10px;
+    
+}
+.email input{
+    font-size: 1.05rem;
+    font-weight: bolder;
+    width: 100%;
+    padding: 12px 20px;
+    outline: none;
+    border: none;
+    border-radius: 16px;
+}
+
+.password{
+    width: 70%;
+    margin: 10px;
+}
+.password input{
+    font-size: 1.05rem;
+    font-weight: bolder;
+    width: 100%;
+    padding: 12px 20px;
+    outline: none;
+    border: none;
+    border-radius: 16px;
+}
+.forget{
+    color: blue;
+    font-size: 0.8rem;
+    -webkit-user-select: none;
+    -ms-user-select: none; 
+    user-select: none; 
+    cursor: pointer;
+}
+
+.submit{
+    background: red;
+    margin-top: 80px;
+    font-size: 1.05rem;
+    font-weight: bolder;
+    width: 30%;
+    padding: 12px 20px;
+    outline: none;
+    border: none;
+    border-radius: 16px;
+    color: white;
+}
+.submit:hover{
+    background: rgb(203, 0, 0);
+}

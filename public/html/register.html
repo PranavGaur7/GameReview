@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/register.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- or -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="../img/myLogo.png" alt="">
+        </div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/games">Games</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+        <div class="login">
+            <button ><a href="user/signUp">Login\Register</a></button>
+        </div>
+    </nav>
+
+    <div class="loginBox">
+
+        <form action="">
+            <div class="img"><img src="../img/myLogo.png" alt=""></div>
+            <div class="email">
+                <input type="email" name="email" placeholder="Enter Email id" id="email">
+            </div>
+            <div class="password">
+                <input type="password" name="password" placeholder="Enter Password" id="password">
+            </div>
+            <div class="confirmPassword">
+                <input type="password" name="confirmPassword" placeholder="Enter Password Again" id="confirmPassword">
+            </div>
+            <button class="submit">REGISTER</button>
+            <div class="haveAccount"><span><a href="/user/login">Already have an account</a></span></div>
+        </form>
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        let email = document.querySelector('#email')
+        let password = document.getElementById('password')
+        let confirmPassword = document.getElementById('confirmPassword')
+        let submit = document.querySelector('.submit')
+
+        submit.addEventListener('click', async function (e) {
+            e.preventDefault();
+            try {
+                const response = await axios.post('/user/signUp', {
+                    email: email.value,
+                    password: password.value,
+                    confirmPassword: confirmPassword.value
+                });
+                // Check if the registration was successful and then redirect
+                if (response.status === 200) {
+                    // alert('yooooooooo')
+                    window.location.href = '/user/login';
+                }
+            } catch (error) {
+                console.error(error);
+            }
+        })
+
+        
+    </script>
+</body>
+
+</html>

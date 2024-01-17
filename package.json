@@ -1,0 +1,21 @@
+{
+  "name": "gaming_review_hub",
+  "version": "1.0.0",
+  "description": "reviewing the games i know",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "pranav",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.3.1",
+    "email-validator": "^2.0.4",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.6.3",
+    "nodemon": "^3.0.1",
+    "openai": "^4.18.0"
+  }
+}

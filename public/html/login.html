@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- or -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="../img/myLogo.png" alt="">
+        </div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/games">Games</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+        <div class="login">
+            <button ><a href="user/signUp">Login\Register</a></button>
+        </div>
+    </nav>
+
+    <div class="loginBox">
+
+        <form action="">
+            <div class="img"><img src="../img/myLogo.png" alt=""></div>
+            <div class="email">
+                <input type="email" name="email" placeholder="Enter Email id" id="email" autocomplete="off">
+            </div>
+            <div class="password">
+                <input type="password" name="password" placeholder="Enter Password" id="password" autocomplete="off">
+            </div>
+            <div class="forget"><span>Forgot Password</span></div>
+            <button class="submit">LOGIN</button>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        let email = document.querySelector("#email");
+        let password = document.querySelector("#password");
+        let submit = document.querySelector('.submit');
+        submit.addEventListener('click', async function (e) {
+            e.preventDefault();
+            try {
+                const response = await axios.post('/user/login', {
+                    email: email.value,
+                    password: password.value
+                });
+                if (response.status === 200) {
+                    window.location.href = '/';
+                }
+            } catch (error) {
+                console.error(error);
+            }
+        })
+
+        // submit.addEventListener('click', async function (e) {
+        //     console.log("yess");
+        //     e.preventDefault();
+        //     let email = document.querySelector("#email").value;
+        //     let password = document.querySelector("#password").value;
+        //     console.log('yes');
+        //     let resp = await axios.post('/user/login', { email, password });
+        //     console.log('resp :', resp);
+        // })
+
+
+    </script>
+</body>
+
+</html>
