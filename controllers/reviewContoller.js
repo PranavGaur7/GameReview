@@ -4,7 +4,7 @@ const gameModel = require('../model/gameModel');
 const apiKey = '987ae294a9044676b06cb661c728d351';
 const url = `https://api.rawg.io/api/games?key=${apiKey}&dates=2023-01-01,2023-06-30&ordering=-added`;
 const jwt = require('jsonwebtoken');
-const JWT_KEY = process.env.JWT_KEY;
+const JWT_KEY = process.env.JWT_KEY;//add your JWT key
 module.exports.getPlanReviews = async function getPlanReviews(req, res) {
     try {
         const gameId = req.params.gameId;

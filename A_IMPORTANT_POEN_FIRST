@@ -1,0 +1,4 @@
+create env file with
+rawg.io api key with name "API_KEY_GAME"
+jwt key with name "JWT_KEY"
+mongo db link with name "DB_LINK"

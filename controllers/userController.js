@@ -1,6 +1,6 @@
 const userModel = require('../model/userModel');
 const jwt = require('jsonwebtoken');
-const JWT_KEY = process.env.JWT_KEY;
+const JWT_KEY = process.env.JWT_KEY;//add your jwt key
 module.exports.createUser = async function createUser(req,res){
     try {
         const data = req.body;

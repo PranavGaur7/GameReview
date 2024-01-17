@@ -1,5 +1,5 @@
 const gamesModel = require('../model/gameModel');
-// const apiKey = GAME_API;
+// api key for rawg.io
 const apiKey = process.env.API_KEY_GAME;
 const url = `https://api.rawg.io/api/games?key=${apiKey}&dates=2023-01-01,2023-06-30&ordering=-added`;
 let nextGameListUrl = null;

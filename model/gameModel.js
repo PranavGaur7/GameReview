@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const db_link = process.env.DB_LINK;
+const db_link = process.env.DB_LINK;//create your mongodb link
 mongoose.connect(db_link)
 .then(function(db) {
     // console.log(db);
